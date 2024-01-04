@@ -279,8 +279,17 @@ vim.o.hlsearch = false
 -- Make line numbers default
 vim.wo.number = true
 
--- Enable mouse mode
-vim.o.mouse = 'a'
+-- Make line numbers relative
+vim.o.relativenumber = true
+
+-- Do not wrap lines
+vim.o.wrap = false
+
+-- Add color column at 101
+vim.o.colorcolumn = "101"
+
+-- Disable mouse mode
+vim.o.mouse = ''
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -428,6 +437,10 @@ vim.defer_fn(function()
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
 
+    modules = {},
+    sync_install = false,
+    ignore_install = {},
+
     highlight = { enable = true },
     indent = { enable = true },
     incremental_selection = {
@@ -565,9 +578,9 @@ require('mason-lspconfig').setup()
 local servers = {
   -- clangd = {},
   -- gopls = {},
-  -- pyright = {},
+  pyright = {},
   -- rust_analyzer = {},
-  -- tsserver = {},
+  tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
