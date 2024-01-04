@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,3 +99,29 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"  # sets pyenv root directory
+export PATH="$PYENV_ROOT/bin:$PATH"  # adds pyenv to the PATH
+eval "$(pyenv init --path)"  # adds pyenv shims to the PATH
+eval "$(pyenv init -)"  # enable autocompletion
+
+# proxy
+proxy() {
+  noproxy
+  ssh -NfD 0.0.0.0:8181 sshconnect@vpn.erudit.org
+  export http_proxy='socks5h://0.0.0.0:8181'
+}
+noproxy() {
+  if [ -n "$(pidof ssh)" ]
+  then
+    killall ssh
+  fi
+  unset http_proxy
+}
+
+export EDITOR=nvim
+alias vi="nvim"
+
+# Make Caps Lock an additonal Ctrl
+setxkbmap -option ctrl:nocaps
