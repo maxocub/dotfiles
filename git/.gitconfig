@@ -1,0 +1,23 @@
+[user]
+	name = Maxime Turcotte
+	email = maxime.turcotte@erudit.org
+[credential]
+	helper = store
+[core]
+	editor = vi
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[push]
+	default = simple
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
+[url "https://github.com/"]
+	insteadOf = git://github.com/
