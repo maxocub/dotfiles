@@ -125,3 +125,5 @@ alias vi="nvim"
 
 # Make Caps Lock an additonal Ctrl
 setxkbmap -option ctrl:nocaps
+
+bindkey -s ^f "tmux-sessionizer\n"
