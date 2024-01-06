@@ -53,7 +53,8 @@ noproxy() {
   unset http_proxy
 }
 
-export EDITOR=vi
+export EDITOR=nvim
+alias vi=nvim
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
