@@ -1,4 +1,4 @@
-autocmd! bufwritepost $HOME/.vim/vimrc source $HOME/.vim/vimrc
+autocmd! bufwritepost $HOME/.vimrc source $HOME/.vimrc
 
 set number
 set relativenumber
