@@ -5,6 +5,7 @@
 	helper = store
 [core]
 	editor = vi
+	excludesFile = /home/maxocub/.gitignore_global
 [init]
 	defaultBranch = main
 [pull]
