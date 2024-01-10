@@ -29,4 +29,4 @@ alias vi="nvim"
 setxkbmap -option ctrl:nocaps
 
 # Ctrl+f to lunch tmux-sessionizer
-bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^s "tmux-sessionizer\n"
