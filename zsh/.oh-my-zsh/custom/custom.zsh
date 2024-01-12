@@ -25,8 +25,5 @@ noproxy() {
 export EDITOR=nvim
 alias vi="nvim"
 
-# Make Caps Lock an additonal Ctrl
-setxkbmap -option ctrl:nocaps
-
 # Ctrl+f to lunch tmux-sessionizer
 bindkey -s ^s "tmux-sessionizer\n"

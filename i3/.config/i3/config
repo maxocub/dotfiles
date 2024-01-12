@@ -270,3 +270,6 @@ mode "$mode_display" {
         bindsym $mod+z mode "default"
 }
 bindsym $mod+z mode "$mode_display"
+
+# Make Caps Lock an additonal Ctrl
+exec setxkbmap -option ctrl:nocaps
