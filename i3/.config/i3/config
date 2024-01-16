@@ -202,7 +202,7 @@ bar {
 # Move workspaces
 bindsym $mod+x move workspace to output next
 
-#focus_follows_mouse no
+focus_follows_mouse no
 
 # Shutdown, restart, suspend...
 set $mode_system (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
@@ -272,4 +272,4 @@ mode "$mode_display" {
 bindsym $mod+z mode "$mode_display"
 
 # Make Caps Lock an additonal Ctrl
-exec setxkbmap -option ctrl:nocaps
+exec_always setxkbmap -option ctrl:nocaps
