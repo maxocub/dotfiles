@@ -34,16 +34,12 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Use wpctl to adjust volume with F1, F2, F3 & F4.
+# Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindcode 121 exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && $refresh_i3status
-bindcode 122 exec --no-startup-id wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- && $refresh_i3status
-bindcode 123 exec --no-startup-id wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+ && $refresh_i3status
-bindcode 198 exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && $refresh_i3status
-bindcode 67 exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && $refresh_i3status
-bindcode 68 exec --no-startup-id wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%- && $refresh_i3status
-bindcode 69 exec --no-startup-id wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+ && $refresh_i3status
-bindcode 70 exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use btightnessctl to adjust brightness with F5 & F6.
 bindcode 232 exec brightnessctl s 10%-
