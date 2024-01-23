@@ -217,48 +217,52 @@ bindsym $mod+BackSpace mode "$mode_system"
 set $mode_display (l) Laptop, (h) Home, (o) Office, (t) TV
 mode "$mode_display" {
         bindsym l exec xrandr \
-                --output eDP-1 --primary --mode 1680x1050 --pos 0x0 --rotate normal \
-                --output HDMI-1 --off \
-                --output DP-1 --off \
-                --output DP-2 --off \
-                --output DP-3 --off \
-                --output DP-4 --off \
-                --output DP-3-1 --off \
-                --output DP-3-2 --off \
-                --output DP-3-3 --off, \
+                --output eDP1 --primary --mode 1920x1200 --pos 0x0 --rotate normal \
+                --output DP1 --off \
+                --output DP2 --off \
+                --output DP3 --off \
+                --output DP3-1 --off \
+                --output DP3-2 --off \
+                --output DP3-3 --off \
+                --output DP4 --off \
+                --output HDMI1 --off \
+                --output VIRTUAL1 --off, \
                 mode "default"
         bindsym h exec xrandr \
-                --output eDP-1 --mode 1680x1050 --pos 0x385 --rotate normal \
-                --output HDMI-1 --off \
-                --output DP-1 --off \
-                --output DP-2 --off \
-                --output DP-3 --off \
-                --output DP-4 --off \
-                --output DP-3-1 --primary --mode 1680x1050 --pos 1680x0 --rotate normal \
-                --output DP-3-2 --off \
-                --output DP-3-3 --off, \
+                --output eDP1 --primary --mode 1920x1200 --pos 0x525 --rotate normal \
+                --output DP1 --off \
+                --output DP2 --off \
+                --output DP3 --off \
+                --output DP3-1 --mode 1680x1050 --pos 1920x0 --rotate normal \
+                --output DP3-2 --off \
+                --output DP3-3 --off \
+                --output DP4 --off \
+                --output HDMI1 --off \
+                --output VIRTUAL1 --off, \
                 mode "default"
         bindsym o exec xrandr \
-                --output eDP-1 --mode 1680x1050 --pos 120x1080 --rotate normal \
-                --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal \
-                --output DP-1 --off \
-                --output DP-2 --off \
-                --output DP-3 --off \
-                --output DP-4 --off \
-                --output DP-3-1 --off \
-                --output DP-3-2 --off \
-                --output DP-3-3 --off, \
+                --output eDP1 --primary --mode 1920x1200 --pos 0x1080 --rotate normal \
+                --output DP1 --off \
+                --output DP2 --off \
+                --output DP3 --off \
+                --output DP3-1 --off \
+                --output DP3-2 --off \
+                --output DP3-3 --off \
+                --output DP4 --off \
+                --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate normal \
+                --output VIRTUAL1 --off, \
                 mode "default"
         bindsym t exec xrandr \
-                --output eDP-1 --primary --mode 1920x1200 --pos 0x1080 --rotate normal \
-                --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal \
-                --output DP-1 --off \
-                --output DP-2 --off \
-                --output DP-3 --off \
-                --output DP-4 --off \
-                --output DP-3-1 --off \
-                --output DP-3-2 --off \
-                --output DP-3-3 --off, \
+                --output eDP1 --primary --mode 1920x1200 --pos 0x1080 --rotate normal \
+                --output DP1 --off \
+                --output DP2 --off \
+                --output DP3 --off \
+                --output DP3-1 --off \
+                --output DP3-2 --off \
+                --output DP3-3 --off \
+                --output DP4 --off \
+                --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate normal \
+                --output VIRTUAL1 --off, \
                 mode "default"
         bindsym Return mode "default"
         bindsym Escape mode "default"
