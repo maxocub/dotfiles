@@ -33,6 +33,7 @@ alias vi="nvim"
 # Ctrl+s to lunch tmux-sessionizer
 bindkey -s ^s "tmux-sessionizer\n"
 
+# Use catppuccin colors for fzf
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
