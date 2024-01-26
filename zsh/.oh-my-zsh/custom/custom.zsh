@@ -30,7 +30,7 @@ noproxy() {
 export EDITOR=nvim
 alias vi="nvim"
 
-# Ctrl+f to lunch tmux-sessionizer
+# Ctrl+s to lunch tmux-sessionizer
 bindkey -s ^s "tmux-sessionizer\n"
 
 export FZF_DEFAULT_OPTS=" \
