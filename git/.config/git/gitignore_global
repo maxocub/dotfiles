@@ -1,3 +1,5 @@
 env
 .python-version
 pyrightconfig.json
+local-dev.yaml
+*_dump.sql
