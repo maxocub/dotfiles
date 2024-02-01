@@ -7,11 +7,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"  # adds pyenv to the PATH
 eval "$(pyenv init --path)"  # adds pyenv shims to the PATH
 eval "$(pyenv init -)"  # enable autocompletion
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # proxy
 proxy() {
   noproxy
