@@ -36,3 +36,6 @@ export FZF_DEFAULT_OPTS=" \
 
 # venv activation
 alias activate="source env/bin/activate"
+
+# Load and unload environment variables depending on the current directory.
+eval "$(direnv hook zsh)"

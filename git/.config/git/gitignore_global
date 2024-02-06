@@ -4,3 +4,4 @@ pyrightconfig.json
 local-dev.yaml
 dump.sql
 .nvmrc
+.envrc
