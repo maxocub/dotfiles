@@ -5,3 +5,4 @@ local-dev.yaml
 dump.sql
 .nvmrc
 .envrc
+.nvim.lua
