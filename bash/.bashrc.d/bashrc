@@ -39,6 +39,9 @@ export FZF_DEFAULT_OPTS=" \
 # venv activation
 alias activate="source env/bin/activate"
 
+# lazygit
+alias gg="lazygit"
+
 # Load and unload environment variables depending on the current directory.
 eval "$(direnv hook bash)"
 
