@@ -1,5 +1,5 @@
 import = [
-  "~/.config/alacritty/catppuccin.toml"
+  "~/.config/alacritty/catppuccin.toml",
 ]
 
 [window]
@@ -12,3 +12,9 @@ size = 16
 
 [env]
 TERM = "xterm-256color"
+
+[shell]
+program = "tmux-sessionizer"
+args = [
+  "maxocub",
+]
