@@ -37,7 +37,6 @@ noproxy() {
 
 # Use neovim
 export EDITOR=nvim
-alias vi="nvim"
 
 # Use catppuccin colors for fzf
 export FZF_DEFAULT_OPTS=" \
@@ -50,6 +49,9 @@ alias a="source env/bin/activate"
 
 # lazygit
 alias g="lazygit"
+
+# neovim
+alias v="nvim"
 
 # Load and unload environment variables depending on the current directory.
 eval "$(direnv hook bash)"
