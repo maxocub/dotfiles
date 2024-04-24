@@ -52,6 +52,7 @@ alias g="lazygit"
 
 # neovim
 alias v="nvim"
+alias vi="nvim"
 
 # Load and unload environment variables depending on the current directory.
 eval "$(direnv hook bash)"
