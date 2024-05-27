@@ -60,3 +60,10 @@ eval "$(direnv hook bash)"
 
 # Activate Starship prompt
 eval "$(starship init bash)"
+
+# Add cargo bin directory to PATH
+export PATH=$PATH:~/.cargo/bin/
+
+# Activate atuin
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)" || true
