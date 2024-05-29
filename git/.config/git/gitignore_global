@@ -7,3 +7,4 @@ dump.sql
 .nvmrc
 .envrc
 .lazy.lua
+lazy-lock.json
