@@ -1,49 +1,67 @@
 # pyenv
 lazy_load_pyenv() {
-	unset -f pyenv
-	export PYENV_ROOT="$HOME/.pyenv"
-	command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-	eval "$(pyenv init -)"
+  unset -f pyenv
+  export PYENV_ROOT="$HOME/.pyenv"
+  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
 }
 pyenv() {
-	lazy_load_pyenv
-	pyenv $@
+  lazy_load_pyenv
+  pyenv $@
 }
 
 # nvm
 lazy_load_nvm() {
-	unset -f nvm
-	export NVM_DIR="$HOME/.nvm"
-	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  unset -f nvm
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 }
 nvm() {
-	lazy_load_nvm
-	nvm $@
+  lazy_load_nvm
+  nvm $@
 }
 
 # proxy
 proxy() {
-	noproxy
-	ssh -NfD 0.0.0.0:9999 sshconnect@vpn.erudit.org
-	export http_proxy='socks5h://0.0.0.0:9999'
+  noproxy
+  ssh -NfD 0.0.0.0:9999 sshconnect@vpn.erudit.org
+  export http_proxy='socks5h://0.0.0.0:9999'
 }
 noproxy() {
-	if [ -n "$(pidof ssh)" ]; then
-		killall ssh
-	fi
-	unset http_proxy
+  if [ -n "$(pidof ssh)" ]; then
+    killall ssh
+  fi
+  unset http_proxy
 }
 
 # Use neovim
 export EDITOR=nvim
 
 # Use tokyonight colors for fzf
-export FZF_DEFAULT_OPTS=" \
---color=fg:#c8d3f5,bg:#222436,hl:#ff966c \
---color=fg+:#c8d3f5,bg+:#2f334d,hl+:#ff966c \
---color=info:#82aaff,prompt:#86e1fc,pointer:#86e1fc \
---color=marker:#c3e88d,spinner:#c3e88d,header:#c3e88d"
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  --highlight-line \
+  --info=inline-right \
+  --ansi \
+  --layout=reverse \
+  --border=none
+  --color=bg+:#2d3f76 \
+  --color=bg:#1e2030 \
+  --color=border:#589ed7 \
+  --color=fg:#c8d3f5 \
+  --color=gutter:#1e2030 \
+  --color=header:#ff966c \
+  --color=hl+:#65bcff \
+  --color=hl:#65bcff \
+  --color=info:#545c7e \
+  --color=marker:#ff007c \
+  --color=pointer:#ff007c \
+  --color=prompt:#65bcff \
+  --color=query:#c8d3f5:regular \
+  --color=scrollbar:#589ed7 \
+  --color=separator:#ff966c \
+  --color=spinner:#ff007c \
+"
 
 # venv activation
 alias a="source env/bin/activate"
