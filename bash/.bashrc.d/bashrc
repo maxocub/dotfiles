@@ -7,19 +7,21 @@ lazy_load_pyenv() {
 }
 pyenv() {
   lazy_load_pyenv
-  pyenv $@
+  pyenv "$@"
 }
 
 # nvm
 lazy_load_nvm() {
   unset -f nvm
   export NVM_DIR="$HOME/.nvm"
+  # shellcheck source=/home/maxocub/.nvm/nvm.sh
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  # shellcheck source=/home/maxocub/.nvm/bash_completion
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 }
 nvm() {
   lazy_load_nvm
-  nvm $@
+  nvm "$@"
 }
 
 # proxy
@@ -83,5 +85,6 @@ eval "$(starship init bash)"
 export PATH=$PATH:~/.cargo/bin/
 
 # Activate atuin
-[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+# shellcheck source=/home/maxocub/.bash-preexec.sh
+[[ -f ~/.bash-preexec.sh ]] && source "$HOME/.bash-preexec.sh"
 eval "$(atuin init bash)" || true
