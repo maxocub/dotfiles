@@ -1,5 +1,7 @@
 os:
   editPreset: "nvim-remote"
+services:
+  'gitlab.erudit.org': 'gitlab:gitlab.erudit.org'
 gui:
   nerdFontsVersion: "3"
   theme:
