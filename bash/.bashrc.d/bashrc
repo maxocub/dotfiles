@@ -81,8 +81,8 @@ eval "$(direnv hook bash)"
 # Activate Starship prompt
 eval "$(starship init bash)"
 
-# Add cargo bin directory to PATH
-export PATH=$PATH:~/.cargo/bin/
+# Add atuin bin directory to PATH
+export PATH=$PATH:~/.atuin/bin/
 
 # Activate atuin
 # shellcheck source=/home/maxocub/.bash-preexec.sh
