@@ -1,5 +1,4 @@
-env
-venv
+.venv
 .python-version
 pyrightconfig.json
 local-dev.yaml

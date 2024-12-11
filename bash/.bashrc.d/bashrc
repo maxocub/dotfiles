@@ -66,7 +66,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 "
 
 # venv activation
-alias a="source env/bin/activate"
+alias a="source .venv/bin/activate"
 
 # lazygit
 alias g="lazygit"
