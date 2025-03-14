@@ -28,7 +28,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-  selected=$(find /home/ ~/personnel/ ~/travail/ -mindepth 1 -maxdepth 1 -type d | fzf)
+  selected=$(find /home/ ~/Personnel/ ~/Travail/ -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
