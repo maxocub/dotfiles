@@ -58,6 +58,7 @@ alias a="source .venv/bin/activate"
 
 # lazygit
 alias g="lazygit"
+alias gg="lazygit"
 
 # neovim
 alias v="nvim"
