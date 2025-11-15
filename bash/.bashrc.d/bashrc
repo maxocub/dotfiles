@@ -71,7 +71,7 @@ eval "$(direnv hook bash)"
 eval "$(starship init bash)"
 
 # Add atuin bin directory to PATH
-export PATH=$PATH:~/.atuin/bin/
+source "$HOME/.atuin/bin/env"
 
 # Activate atuin
 # shellcheck source=/home/maxocub/.bash-preexec.sh
