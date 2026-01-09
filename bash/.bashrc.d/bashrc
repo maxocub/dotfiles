@@ -64,6 +64,9 @@ alias gg="lazygit"
 alias v="nvim"
 alias vi="nvim"
 
+# Set vi mode
+set -o vi
+
 # Load and unload environment variables depending on the current directory.
 eval "$(direnv hook bash)"
 
