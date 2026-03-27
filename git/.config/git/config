@@ -6,6 +6,7 @@
 [core]
 	editor = vi
 	excludesFile = ~/.config/git/gitignore_global
+	attributesfile = ~/.config/git/attributes
 [init]
 	defaultBranch = main
 [pull]
@@ -14,6 +15,8 @@
 	default = simple
 [diff]
 	tool = vimdiff
+[diff "mo2po"]
+	textconv = msgunfmt
 [difftool]
 	prompt = false
 [merge]
