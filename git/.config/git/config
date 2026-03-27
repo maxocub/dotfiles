@@ -5,7 +5,7 @@
 	helper = store
 [core]
 	editor = vi
-	excludesFile = ~/.config/git/gitignore_global
+	excludesFile = ~/.config/git/excludes
 	attributesfile = ~/.config/git/attributes
 [init]
 	defaultBranch = main
