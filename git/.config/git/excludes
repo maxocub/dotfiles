@@ -1,7 +1,7 @@
 .venv
 pyrightconfig.json
 local-dev.yaml
-dump.sql
+dump.*
 .nvmrc
 .envrc
 .lazy.lua
