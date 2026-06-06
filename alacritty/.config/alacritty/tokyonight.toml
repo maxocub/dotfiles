@@ -26,12 +26,3 @@ blue = '#9ab8ff'
 magenta = '#caabff'
 cyan = '#b2ebff'
 white = '#c8d3f5'
-
-# Indexed Colors
-[[colors.indexed_colors]]
-index = 16
-color = '#ff966c'
-
-[[colors.indexed_colors]]
-index = 17
-color = '#c53b53'
